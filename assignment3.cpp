@@ -30,7 +30,7 @@ int main() {
             } else if (intYCoordinate < 0) {
                 std::cout << "Point is in the 4th quadrant.";
             } else {
-                std::cout << "On y axis";
+                std::cout << "On x axis";
             }
         } else if (intXCoordinate < 0) {
             if (intYCoordinate > 0) {
@@ -38,10 +38,14 @@ int main() {
             } else if (intYCoordinate < 0) {
                 std::cout << "Point is in the 3rd quadrant.";
             } else {
-                std::cout << "On y axis";
+                std::cout << "On x axis";
             }
         } else {
-            std::cout << "On x axis";
+            if (intYCoordinate == 0) {
+                std::cout << "Point is on the origin.";
+            } else {
+                std::cout << "On y axis";
+            }
         }
     } catch (std::invalid_argument) {
         std::cout << "Please enter integers!";
